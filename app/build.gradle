@@ -1,0 +1,32 @@
+
+plugins {
+    id 'scala'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation files('libs/polygon-1.0.2.jar') //https://github.com/sromku/polygon-contains-point
+
+    implementation 'org.scala-lang:scala-library:2.13.3'
+
+    implementation 'com.google.guava:guava:29.0-jre'
+
+
+    testImplementation 'junit:junit:4.13'
+    testImplementation 'org.scalatest:scalatest_2.13:3.2.2'
+    testImplementation 'org.scalatestplus:junit-4-12_2.13:3.2.2.0'
+
+    testRuntimeOnly 'org.scala-lang.modules:scala-xml_2.13:1.2.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
+
+    implementation 'commons-io:commons-io:2.5'
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'com.bullhead.location.App'
+}
